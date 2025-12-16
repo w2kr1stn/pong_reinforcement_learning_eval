@@ -1,0 +1,41 @@
+[project]
+name = "PongRL"
+version = "0.1.0"
+description = "Written Exam, Modul: Reinforcement Learning, Applied Artificial Intelligence - M.Sc., iu Internatial University, Willi Kristen"
+authors = [{ name = "Willi Kristen", email = "willi.kristen@live.de" }]
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = []
+
+[dependency-groups]
+dev = ["ruff>=0.14.9"]
+
+[project.scripts]
+format = "manage:format"
+clean = "manage:clean"
+
+[tool.ruff]
+line-length = 100
+target-version = "py313"
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "F",   # pyflakes
+    "W",   # pycodestyle warnings
+    "N",   # pep8-naming
+    "B",   # flake8-bugbear
+    "I",   # isort
+    "UP",  # pyupgrade
+    "C4",  # flake8-comprehensions
+    "SIM", # flake8-simplify
+]
+ignore = [
+    "B008", # FastAPI Depends() pattern in argument defaults
+]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
