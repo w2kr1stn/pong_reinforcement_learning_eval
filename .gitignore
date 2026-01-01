@@ -1,13 +1,17 @@
-# VS Code
-devcontainers.json
-
 # Python-generated files
 __pycache__/
 *.py[oc]
 build/
 dist/
+.ruff_cache/
+uv.lock
 wheels/
 *.egg-info
 
 # Virtual environments
 .venv
+
+# Project specififc
+plots/*
+pong_results/*
+*.gif
